@@ -1,0 +1,66 @@
+@Entry
+@Component
+struct Index {
+
+  build() {
+    Stack(){
+      //背景
+      Image($r('app.media.bg'))
+      //页面主体
+      Column(){
+        Row(){
+          //排序
+          Column(){
+            Image($r('app.media.up'))
+              .width(16)
+          }
+          .width(56)
+          .height(32)
+          .borderColor('#604637')
+          .borderWidth(1)
+          .borderRadius(4)
+          .justifyContent(FlexAlign.Center)
+          .margin({left:20})
+          Blank()
+          //标题
+          Text('Memo')
+            .fontSize(24)
+            .fontColor('#FFFEFC')
+            .fontWeight('600')
+          Blank()
+          //编辑
+          Column(){
+            Image($r('app.media.edit'))
+              .width(16)
+          }
+          .width(56)
+          .height(32)
+          .borderColor('#604637')
+          .borderWidth(1)
+          .borderRadius(4)
+          .justifyContent(FlexAlign.Center)
+          .margin({right:20})
+        }
+        .width('100%')
+        .height(70)
+        .linearGradient({
+          direction:GradientDirection.Bottom,
+          colors:[['#7B6558',0.5],['#725A4E',1]]
+        })
+        .shadow({
+          radius:10,
+          color:'rgba(0,0,0,0.3)',
+          offsetX:0,
+          offsetY:10
+        })
+        Divider()
+          .color('#604637')
+
+      }
+      .width('100%')
+      .height('100%')
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
